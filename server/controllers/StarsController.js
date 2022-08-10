@@ -9,11 +9,11 @@ export class StarsController extends BaseController{
     this.router
     .get('', this.getStars)
     .get('/:starId', this.getStarById)
-    .use(Auth0Provider.getAuthorizedUserInfo)
+    // .use(Auth0Provider.getAuthorizedUserInfo)
     .post('', this.createStar)
     .delete('/:starId', this.deleteStar)
   }
-  getStars(arg0, getStars) {
+  getStarsByGalaxyId(arg0, getStars) {
     throw new Error("Method not implemented.");
   }
   getStarById(arg0, getStarById) {

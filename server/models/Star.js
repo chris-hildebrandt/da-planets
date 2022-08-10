@@ -6,7 +6,6 @@ export const StarSchema = new Schema(
   {
     name: { type: String, required: true, minlength: 3, maxlength:100},
     description: { type: String, maxlength: 100},
-    creatorId: { type: ObjectId, ref: 'Profile', required: true },
     galaxyId: { type: ObjectId, required: true, ref: 'Galaxy'}
   },
   { timestamps: true, toJSON: { virtuals: true } }
