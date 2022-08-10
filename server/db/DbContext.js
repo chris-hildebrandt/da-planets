@@ -1,9 +1,9 @@
 import mongoose from 'mongoose'
 import { AccountSchema } from '../models/Account'
-import { ValueSchema } from '../models/Value'
+import { GalaxiesSchema } from '../models/Galaxy.js'
 
 class DbContext {
-  Values = mongoose.model('Value', ValueSchema);
+  Galaxies = mongoose.model('Galaxy', GalaxiesSchema);
   Account = mongoose.model('Account', AccountSchema);
 }
 
