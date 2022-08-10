@@ -9,7 +9,7 @@ export class GalaxiesController extends BaseController {
       .get('', this.getGalaxies)
       .get('/:galaxyId', this.getGalaxyById)
       // NOTE: Beyond this point all routes require Authorization tokens (the user must be logged in)
-      .use(Auth0Provider.getAuthorizedUserInfo)
+      // .use(Auth0Provider.getAuthorizedUserInfo)
       .post('', this.createGalaxy)
       .delete('/:galaxyId', this.deleteGalaxy)
   }
@@ -35,7 +35,6 @@ export class GalaxiesController extends BaseController {
   async createGalaxy(req, res, next) {
     try {
       // NOTE NEVER TRUST THE CLIENT TO ADD THE CREATOR ID
-      req.body.creatorId = req.userInfo.id
       let galaxy = await galaxiesService.createGalaxy(req.body)
       res.send(galaxy)
     } catch (error) {
