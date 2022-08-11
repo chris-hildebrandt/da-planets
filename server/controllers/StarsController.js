@@ -7,22 +7,22 @@ export class StarsController extends BaseController{
   constructor(){
     super('api/stars')
     this.router
-    .get('', this.getStars)
+    .get('', this.getStarsByGalaxyId)
     .get('/:starId', this.getStarById)
     // .use(Auth0Provider.getAuthorizedUserInfo)
     .post('', this.createStar)
     .delete('/:starId', this.deleteStar)
   }
-  getStarsByGalaxyId(arg0, getStars) {
+  getStarsByGalaxyId(req, res, next) {
     throw new Error("Method not implemented.");
   }
-  getStarById(arg0, getStarById) {
+  getStarById(req, res, next) {
     throw new Error("Method not implemented.");
   }
-  createStar(arg0, createStar) {
+  createStar(req, res, next) {
     throw new Error("Method not implemented.");
   }
-  deleteStar(arg0, deleteStar) {
+  deleteStar(req, res, next) {
     throw new Error("Method not implemented.");
   }
 }
