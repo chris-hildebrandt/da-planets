@@ -40,4 +40,11 @@ NotesSchema.virtual('recipient', {
   ref: 'Account'
 })
 
+NotesSchema.virtual('ship', {
+  justOne: true,
+  foreignField: '_id',
+  localField: 'shipId',
+  ref: 'Account'
+})
+
 // on the controller side auth0 checks that the creator is authorized, it checks the creator id, but in the service we need to check the other ID's to verify good recipient and ship id's. you want to stop the function if the recipient or ship are bad. you get the 
