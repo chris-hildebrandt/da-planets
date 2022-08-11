@@ -50,3 +50,7 @@ NotesSchema.virtual('ship', {
 // on the controller side auth0 checks that the creator is authorized, it checks the creator id, but in the service we need to check the other ID's to verify good recipient and ship id's. you want to stop the function if the recipient or ship are bad. you get the 
 // when choosing which service to use on multi-relational objects, use the service for the actual object you are expecting returned
 // urls are typically not case sensitive so convention is to us kabob case
+
+// client side notes: be careful not to import the server side files! watch the paths pop.error on the client side, console error as well 
+
+// in the authController on the client side there is an authservice.on that allows you to run functions on successful login
