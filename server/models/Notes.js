@@ -54,3 +54,5 @@ NotesSchema.virtual('ship', {
 // client side notes: be careful not to import the server side files! watch the paths pop.error on the client side, console error as well 
 
 // in the authController on the client side there is an authservice.on that allows you to run functions on successful login
+
+// hackathon notes: poster has only auth to edit and delete legends of the hidden temple
